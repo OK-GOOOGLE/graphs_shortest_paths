@@ -41,7 +41,7 @@ void DFS_for_reversed_graph(std::vector<std::vector<int> >& graph,
 std::vector<std::vector<int> > all_SCC(std::vector<std::vector<int> > &graph,
                                        std::vector<int>& visiting_order);
 
-//demo function. Here graph is generated,
+//demo function.  Graph is generated here
 void demo_Kosaraju();
 
 #endif //INC_3_KOSARAJU_H

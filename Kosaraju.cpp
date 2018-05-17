@@ -130,17 +130,13 @@ void demo_Kosaraju() {
     print_graph(graph);
     vector<int> visited_vertices;
 
-//    cout << "Depth First Traversal order: ";
     DFS_for_disconnected_graph(graph, visited_vertices);
-//    cout << endl;
     cout << "Visiting order: ";
     for (int i = 0; i < visited_vertices.size(); ++i)
         cout << visited_vertices[i] << " ";
 
-//    cout << endl << "Reversed graph:" << endl;
     vector<vector <int> > reversed_graph = reverse_graph(graph);
 
-    //print_graph(reversed_graph);
     cout << "=============" << endl;
 
     vector<vector<int> > components = all_SCC(reversed_graph, visited_vertices);

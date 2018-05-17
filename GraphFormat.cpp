@@ -84,8 +84,7 @@ void GraphFormat::setGraphFromFile(const std::string& fileName){
 				isWeightAnalysed = false;
 			}
 			if(currentCharacter == '\n'){
-				// When new line encountered, push back vector to vector
-				// and start analyzing new nodes
+				// When new line encountered, push back vector to vector and start analyzing new nodes
 				graphList_.push_back(currentLine);
 				if(isWeighted_) graphWeights_.push_back(currentLineWeights);
 				currentLine.clear();

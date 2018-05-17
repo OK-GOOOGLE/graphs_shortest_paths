@@ -29,13 +29,10 @@ vector<vector <int> > generate_SC_graph(unsigned nodes, float probability,
                                         vector<int>& weights){
     GraphFormat g = GenerateGraph::withEdgeProbability(nodes, probability, weightStart, weightEnd, true);      // random weighted directed graph
     vector<vector <int> > graph = convert(g);
-    //print_graph(graph);
-    //cout << "=============================" << endl;
     vector<int> visited_vertices;
     DFS_for_disconnected_graph(graph, visited_vertices);                          // Depth First Traversal order
     vector<vector <int> > reversed_graph = reverse_graph(graph);                  // Reverse graph
     vector<vector<int> > components = all_SCC(reversed_graph, visited_vertices);  // Kosaraju's algorithm
-    //print_graph(components);
 
     connect_graph(graph, components);                            // now graph is strongly connected one
     srand (time(NULL));
@@ -115,11 +112,7 @@ vector<int> Bellman_Ford_John (int N, int source,
 
 
     }
-//    cout << "==Distances to all vertices==" << endl << "=============================" << endl;
-//    cout << "ID  Distance" << endl;
-//    for (int i = 0; i < distance.size(); ++i){
-//        cout << i << ":  " << distance[i] << endl;
-//    }
+
     return distance;
 }
 
